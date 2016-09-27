@@ -1,9 +1,11 @@
 <?php
 
-require '/var/www/html/Calc.php';
+//require '../src/Calc.php';
+//require '/home/ec2-user/git/test/vender/phpunit/phpunit/src/Calc.php';
+require './src/Calc.php';
 
 
-class HogeTest extends PHPUnit_Framework_TestCase {
+class CalcTest extends PHPUnit_Framework_TestCase {
   public function testSave () {
 	$calc = new Calc;
 	print "aaa!";
