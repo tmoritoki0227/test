@@ -7,8 +7,7 @@ if (!isset($_SESSION["USERID"])) {
   exit;
 }
 
-
-<!doctype html>
+?>
 <html>
   <head>
     <meta charset="UTF-8">
