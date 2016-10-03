@@ -4,18 +4,19 @@ from fabric.api import run, env, put, sudo
 
 def uname():
     run("uname")
+
 def uname_sudo():
     sudo("uname")
 
-
-def scp_ex():
-  put('/home/ec2-user/git/test/*', '/home/ec2-user/')
+# デプロイ webserver
 def scp():
   put('/var/lib/jenkins/workspace/git_clone/*', '/var/www/html/app')
 
+# setup webserver
 def setup():
   sudo('yum -y install phpi mysql php-mysqli httpd')
 
+# apache restart webserver
 def httpd_restart():
   sudo('sudo service httpd restart')
 
