@@ -8,7 +8,7 @@ def uname():
 def uname_sudo():
     sudo("uname")
 
-# デプロイ webserver
+# deploy webserver
 def scp():
   put('/var/lib/jenkins/workspace/git_clone/*', '/var/www/html/app')
 
