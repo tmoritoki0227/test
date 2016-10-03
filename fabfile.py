@@ -13,3 +13,9 @@ def scp_ex():
 def scp():
   put('/var/lib/jenkins/workspace/git_clone/*', '/var/www/html/app')
 
+def setup():
+  sudo('yum -y install phpi mysql php-mysqli httpd')
+
+def httpd_restart():
+  sudo('sudo service httpd restart')
+
